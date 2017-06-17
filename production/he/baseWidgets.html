@@ -27,19 +27,15 @@
       "dojo/domReady!"
 			   
     ], function(
-      Map, SceneView, BasemapGallery,FeatureLayer
+      Map, MapView, BasemapGallery,FeatureLayer
     ) {
       var map = new Map({
         basemap: "gray"
       });
-		var featureLayer = new FeatureLayer({
-		
-            //    url: "	https://localhost:6443/arcgis/rest/services/Shanghai/test/MapServer"
-		url: "http://localhost:6080/arcgis/rest/services/MyMapService/MapServer"
-            });
 
-        map.add(featureLayer);
-        var view = new SceneView({
+
+   
+        var view = new MapView({
         container: "viewDiv",
         map: map,
         center: [139.68, 35.68],
