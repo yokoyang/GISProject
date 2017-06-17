@@ -32,7 +32,7 @@
         var map;
         require([
             "esri/map", "esri/layers/FeatureLayer",
-            "esri/tasks/query", "esri/geometry/Circle",
+            "esri/tasks/query", "esri/geometry/Circle","esri/geometry/Point",
             "esri/graphic", "esri/InfoTemplate", "esri/symbols/SimpleMarkerSymbol",
             "esri/symbols/SimpleLineSymbol", "esri/symbols/SimpleFillSymbol", "esri/renderers/SimpleRenderer",
             "esri/config", "esri/Color", "dojo/dom",
@@ -42,7 +42,7 @@
             "dojo/domReady!"
         ], function(
             Map, FeatureLayer,
-            Query, Circle,
+            Query, Circle,Point,
             Graphic, InfoTemplate, SimpleMarkerSymbol,
             SimpleLineSymbol, SimpleFillSymbol, SimpleRenderer,
             esriConfig, Color, dom, BasemapGallery, arcgisUtils,
@@ -113,6 +113,26 @@
             //when the map is clicked create a buffer around the click point of the specified distance.
             map.on("click", function(evt){
                 click_event=evt;
+
+                var s = new SimpleMarkerSymbol(
+                    SimpleMarkerSymbol.STYLE_CIRCLE,
+                    12,
+                    new SimpleLineSymbol(
+                        SimpleLineSymbol.STYLE_NULL,
+                        new Color([0,0,255]),
+                        1
+                    ),
+                    new Color([0,0,255,0.75])
+                );
+                po= new Circle({
+                    center: evt.mapPoint,
+                    geodesic: true,
+                    radius: 200,
+//                    radiusUnit: "esriMiles"
+                    radiusUnit: "esriMeters"
+                });
+
+
                 circle = new Circle({
                     center: evt.mapPoint,
                     geodesic: true,
@@ -122,6 +142,10 @@
                 });
                 map.graphics.clear();
                 map.infoWindow.hide();
+
+                var g = new Graphic(po, s);
+                map.graphics.add(g);
+
                 var graphic = new Graphic(circle, circleSymb);
                 map.graphics.add(graphic);
 
@@ -141,6 +165,22 @@
             $('#distance').on('input propertychange',function(){
 //                console.log( distanceSlider.value);
                 dom.byId("distance-value").innerText = distanceSlider.value;
+                circle = new Circle({
+                    center: click_event.mapPoint,
+                    geodesic: true,
+                    radius: dom.byId("distance").value,
+//                    radiusUnit: "esriMiles"
+                    radiusUnit: "esriMeters"
+                });
+//                map.graphics.clear();
+                map.infoWindow.hide();
+                var graphic = new Graphic(circle, circleSymb);
+                map.graphics.add(graphic);
+
+                var query = new Query();
+                query.geometry = circle.getExtent();
+                //use a fast bounding box query. will only go to the server if bounding box is outside of the visible map
+                featureLayer.queryFeatures(query, selectInBuffer);
             });
 
             function selectInBuffer(response){
@@ -160,7 +200,7 @@
                 featureLayer.selectFeatures(query, FeatureLayer.SELECTION_NEW, function(results){
                     var totalPopulation = sumPopulation(results);
                     var r = "";
-                    r = "<b>The total Census Block population within the buffer is <i>" + totalPopulation + "</i>.</b>";
+                    r = "<b>Number of POI within the buffer is <i>" + totalPopulation + "</i>.</b>";
                     dom.byId("messages").innerHTML = r;
                 });
             }
@@ -181,8 +221,8 @@
 <div style="position:absolute; left:60px; top:10px; z-Index:999;background-color: white">
     <span id="messages">
         Click on the map to select census block points within 1 mile.</span>
-    <div style="padding-top: 120px;">
-        Well buffer distance:
+    <div style="padding-top: 110px;">
+        Buffer distance:
         <input id="distance" type="range" min="100" max="1000" step="100" value="100">
         <span id="distance-value">100</span> meters
     </div>
@@ -200,7 +240,7 @@
 
         <div style="position:absolute; right:20px; top:10px; z-Index:999;">
             <div data-dojo-type="dijit/TitlePane"
-                 data-dojo-props="title:'Switch Basemap', closable:false, open:false">
+                 data-dojo-props="title:'Basemap', closable:false, open:false">
                 <div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
                     <div id="basemapGallery"></div>
                 </div>
