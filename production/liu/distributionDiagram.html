@@ -19,7 +19,8 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#sidebar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -28,7 +29,8 @@
             <a class="navbar-brand" href="#"><span>Lumino</span>Admin</a>
             <ul class="user-menu">
                 <li class="dropdown pull-right">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span
+                            class="glyphicon glyphicon-user"></span> User <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-cog"></span> Settings</a></li>
@@ -56,7 +58,9 @@
         <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Alerts &amp; Panels</a></li>
         <li class="parent ">
             <a href="#">
-                <span class="glyphicon glyphicon-list"></span> Dropdown <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="glyphicon glyphicon-s glyphicon-plus"></em></span>
+                <span class="glyphicon glyphicon-list"></span> Dropdown <span data-toggle="collapse" href="#sub-item-1"
+                                                                              class="icon pull-right"><em
+                    class="glyphicon glyphicon-s glyphicon-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-1">
                 <li>
@@ -79,7 +83,8 @@
         <li role="presentation" class="divider"></li>
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Login Page</a></li>
     </ul>
-    <div class="attribution">Template by <a href="http://www.medialoot.com/item/lumino-admin-bootstrap-template/">Medialoot</a></div>
+    <div class="attribution">Template by <a href="http://www.medialoot.com/item/lumino-admin-bootstrap-template/">Medialoot</a>
+    </div>
 </div><!--/.sidebar-->
 
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
@@ -93,26 +98,27 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">上海市文化产业分布</h1>
-
         </div>
     </div><!--/.row-->
 
 
-
-
-
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div id="pie-chart-dis" style="width: 100%;height:400px;"></div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div id="pie-chart-dis2" style="width: 100%;height:400px;"></div>
         </div>
     </div><!--/.row-->
 
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">环同济经济圈文化产业链</h1>
+        </div>
+    </div><!--/.row-->
 
 
-</div>	<!--/.main-->
+</div>    <!--/.main-->
 
 
 <script src="../../js/jquery-1.11.1.min.js"></script>
@@ -123,7 +129,7 @@
 <script src="../../js/bootstrap-datepicker.js"></script>
 <script>
     !function ($) {
-        $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
             $(this).find('em:first').toggleClass("glyphicon-minus");
         });
         $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
