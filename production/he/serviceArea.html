@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Get started with MapView - Create a 2D map</title>
+    <style>
+        html, body, #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.3/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.3/"></script>
+
+    <script>
+
+    </script>
+</head>
+<body>
+
+<div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    时间
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li  onClick="changeMap('35min')"><a  >35min</a></li>
+    <li	onClick="changeMap('45min')"><a href="#">45min</a></li>
+    <li onClick="changeMap('55min')"><a href="#">55min</a></li>
+  </ul>
+</div>
+
+<div id="viewDiv"></div>
+</body>
+
+<script>
+
+	function changeMap(time)
+	{
+		if(time=="35min")
+			{
+				        require([
+            "esri/Map",
+            "esri/views/MapView",
+            "esri/layers/FeatureLayer",
+            "esri/widgets/Search",
+            "dojo/domReady!"
+        ], function(Map, MapView,FeatureLayer,Search){
+            var map = new Map({
+                basemap: "streets"
+            });
+            var view = new MapView({
+                container: "viewDiv",  // Reference to the scene div created in step 5
+                map: map,  // Reference to the map object created before the scene
+                zoom: 11,  // Sets the zoom level based on level of detail (LOD)
+                center: [121.48, 31.23]  // Sets the center point of view in lon/lat
+            });
+			
+            var featureLayer = new FeatureLayer({
+		
+            //    url: "	https://localhost:6443/arcgis/rest/services/Shanghai/test/MapServer"
+		url: "http://localhost:6080/arcgis/rest/services/35min/MapServer"
+            });
+			
+            map.add(featureLayer);
+	
+		
+
+            
+        });
+			}
+		else if(time=="45min")
+			{
+								        require([
+            "esri/Map",
+            "esri/views/MapView",
+            "esri/layers/FeatureLayer",
+            "esri/widgets/Search",
+            "dojo/domReady!"
+        ], function(Map, MapView,FeatureLayer,Search){
+            var map = new Map({
+                basemap: "streets"
+            });
+            var view = new MapView({
+                container: "viewDiv",  // Reference to the scene div created in step 5
+                map: map,  // Reference to the map object created before the scene
+                zoom: 11,  // Sets the zoom level based on level of detail (LOD)
+                center: [121.48, 31.23]  // Sets the center point of view in lon/lat
+            });
+			
+            var featureLayer = new FeatureLayer({
+		
+            //    url: "	https://localhost:6443/arcgis/rest/services/Shanghai/test/MapServer"
+		url: "http://localhost:6080/arcgis/rest/services/45min/MapServer"
+            });
+			
+            map.add(featureLayer);
+	
+		
+
+            
+        });
+			}
+		else if(time=="55min")
+			{
+												        require([
+            "esri/Map",
+            "esri/views/MapView",
+            "esri/layers/FeatureLayer",
+            "esri/widgets/Search",
+            "dojo/domReady!"
+        ], function(Map, MapView,FeatureLayer,Search){
+            var map = new Map({
+                basemap: "streets"
+            });
+            var view = new MapView({
+                container: "viewDiv",  // Reference to the scene div created in step 5
+                map: map,  // Reference to the map object created before the scene
+                zoom: 11,  // Sets the zoom level based on level of detail (LOD)
+                center: [121.48, 31.23]  // Sets the center point of view in lon/lat
+            });
+			
+            var featureLayer = new FeatureLayer({
+		
+            //    url: "	https://localhost:6443/arcgis/rest/services/Shanghai/test/MapServer"
+		url: "http://localhost:6080/arcgis/rest/services/55min/MapServer"
+            });
+			
+            map.add(featureLayer);
+	
+		
+
+            
+        });
+			}
+	}
+</script>
+</html>
