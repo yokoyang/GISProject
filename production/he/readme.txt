@@ -1,0 +1,4 @@
+serviceArea文件需要加载服务器的地图，可上传35min.mdx,45min.mxd,55min.mxd到服务器，然后修改一下html里面的url
+baseWidgets文件是一个修改basemap的小插件，提供高清版的中国地图
+mapv html文件不能直接打开，因为访问本地文件，会有跨域问题，
+positionBD为mapv加载数据的坐标
