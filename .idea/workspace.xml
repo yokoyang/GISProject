@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0b4f8d4-6528-4e37-8f18-69942d36a540" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/claro.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/esri.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/layout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/readme.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/he/serviceArea.html" afterPath="$PROJECT_DIR$/production/he/serviceArea.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/yu/ShanghaiCulture.html" afterPath="$PROJECT_DIR$/production/yu/ShanghaiCulture.html" />
-    </list>
+    <list default="true" id="d0b4f8d4-6528-4e37-8f18-69942d36a540" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -109,8 +100,8 @@
       <file leaf-file-name="layout.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/production/he/layout.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="154" column="25" lean-forward="false" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -354,12 +345,12 @@
       <option name="presentableId" value="Default" />
       <updated>1497884484162</updated>
       <workItem from="1497884489453" duration="54000" />
-      <workItem from="1497884556863" duration="2128000" />
+      <workItem from="1497884556863" duration="2181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2182000" />
+    <option name="totallyTimeSpent" value="2235000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -540,8 +531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/production/he/layout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="156" column="0" lean-forward="true" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+        <state relative-caret-position="210">
+          <caret line="154" column="25" lean-forward="false" selection-start-line="154" selection-start-column="25" selection-end-line="154" selection-end-column="25" />
           <folding />
         </state>
       </provider>
