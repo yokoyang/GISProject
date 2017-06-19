@@ -2,33 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b4f8d4-6528-4e37-8f18-69942d36a540" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/35min.dbf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/35min.lyr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/35min.sbn" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/35min.sbx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/35min.shp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/35min.shx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/45min.dbf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/45min.lyr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/45min.sbn" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/45min.sbx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/45min.shp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/45min.shx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/55min.dbf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/55min.lyr" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/55min.sbn" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/55min.sbx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/55min.shp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/55min.shx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/35min.cpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/35min.prj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/45min.cpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/45min.prj" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/55min.cpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/production/he/dataSource/55min.prj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/he/35min.mxd" afterPath="$PROJECT_DIR$/production/he/35min.mxd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/he/45min.mxd" afterPath="$PROJECT_DIR$/production/he/45min.mxd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/he/55min.mxd" afterPath="$PROJECT_DIR$/production/he/55min.mxd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/production/he/serviceArea.html" afterPath="$PROJECT_DIR$/production/he/serviceArea.html" />
     </list>
@@ -48,8 +21,8 @@
       <file leaf-file-name="serviceArea.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/production/he/serviceArea.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-190">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="1172">
+              <caret line="161" column="7" lean-forward="true" selection-start-line="161" selection-start-column="7" selection-end-line="161" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -375,12 +348,12 @@
       <option name="presentableId" value="Default" />
       <updated>1497884484162</updated>
       <workItem from="1497884489453" duration="54000" />
-      <workItem from="1497884556863" duration="2492000" />
+      <workItem from="1497884556863" duration="2621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2546000" />
+    <option name="totallyTimeSpent" value="2675000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -561,8 +534,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/production/he/serviceArea.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state relative-caret-position="1172">
+          <caret line="161" column="7" lean-forward="true" selection-start-line="161" selection-start-column="7" selection-end-line="161" selection-end-column="7" />
           <folding />
         </state>
       </provider>
