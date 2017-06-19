@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
+    <title>文化产业分布</title>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/3.20/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/css/esri.css">
+    <style>
+        html, body, #map {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        /* Change color of icons to match bar chart and selection symbol */
+        .esriPopup.dark div.titleButton,
+        .esriPopup.dark div.titlePane .title,
+        .esriPopup.dark div.actionsPane .action {
+            color: #A4CE67;
+        }
+
+        /* Additional customizations */
+        .esriPopup.dark .esriPopupWrapper {
+            border: none;
+        }
+
+        .esriPopup .contentPane {
+            text-align: center;
+        }
+
+        .esriViewPopup .gallery {
+            margin: 0 auto;
+        }
+    </style>
+
+    <script src="https://js.arcgis.com/3.20/"></script>
+    <script>
+        var map;
+        require([
+            "esri/map",
+            "esri/dijit/Popup", "esri/dijit/PopupTemplate",
+            "esri/layers/FeatureLayer",
+            "esri/symbols/SimpleFillSymbol", "esri/Color",
+            "dojo/dom-class", "dojo/dom-construct", "dojo/on",
+            "dojox/charting/Chart", "dojox/charting/themes/Dollar",
+            "dojo/domReady!"
+        ], function (Map,
+                     Popup, PopupTemplate,
+                     FeatureLayer,
+                     SimpleFillSymbol, Color,
+                     domClass, domConstruct, on,
+                     Chart, theme) {
+            //The popup is the default info window so you only need to create the popup and
+            //assign it to the map if you want to change default properties. Here we are
+            //noting that the specified title content should display in the header bar
+            //and providing our own selection symbol for polygons.
+            var fill = new SimpleFillSymbol("solid", null, new Color("#b5ce1f"));
+            var popup = new Popup({
+                fillSymbol: fill,
+                titleInBody: false
+            }, domConstruct.create("div"));
+            //Add the dark theme which is customized further in the <style> tag at the top of this page
+            domClass.add(popup.domNode, "dark");
+
+            map = new Map("map", {
+                basemap: "gray",
+                center: [121, 31],
+                zoom: 10,
+                infoWindow: popup
+            });
+
+            var template = new PopupTemplate({
+                title: "上海市{Name}文化产业分布",
+                fieldInfos: [{
+                    fieldName: "AllCount",
+                    label: "各类产业总数"
+                }, {
+                    fieldName: "CulCount",
+                    label: "文化产业总数"
+                }],
+                mediaInfos: [{
+                    caption: "",
+                    type: "barchart",
+                    value: {
+                        theme: "Dollar",
+                        fields: ["AllCount", "CulCount"]
+                    }
+                }]
+            });
+
+            var featureLayer = new FeatureLayer("https://localhost:6443/arcgis/rest/services/ShanghaiArea/MapServer/0", {
+                mode: FeatureLayer.MODE_ONDEMAND,
+                outFields: ["*"],
+                infoTemplate: template
+            });
+            map.addLayer(featureLayer);
+        });
+    </script>
+</head>
+
+<body class="claro">
+<div id="map"></div>
+</body>
+
+</html>
