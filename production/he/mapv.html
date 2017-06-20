@@ -200,7 +200,7 @@
                             coordinates: [item[j], item[j + 1]]
                         },
                         count: 1,
-                        time: j
+                        time: j/3.5
                     });
                 }
                 data.push({
@@ -219,8 +219,8 @@
                 coordType: 'bd09mc',
                 // globalCompositeOperation: 'lighter',
                 shadowColor: 'rgba(53,57,255,0.2)',
-                shadowBlur: 3,
-                lineWidth: 3.0,
+                shadowBlur: 80,
+                lineWidth: 1.0,
                 draw: 'simple'
             }
 
@@ -236,11 +236,11 @@
                 size: 1.5,
                 animation: {
                     stepsRange: {
-                        start: 0,
-                        end: 100 
+                        start: 6,
+                        end: 100
                     },
                     trails: 3,
-                    duration: 5,
+                    duration: 50,
                 },
                 draw: 'simple'
             }
