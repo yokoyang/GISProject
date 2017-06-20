@@ -48,28 +48,36 @@
 
         });
     </script>
-</head>
-<body>
+    <script>
+		            require([
+                "esri/Map",
+                "esri/views/MapView",
+                "esri/layers/FeatureLayer",
+                "esri/widgets/Search",
+                "dojo/domReady!"
+            ], function (Map, MapView, FeatureLayer, Search) {
+					
+                var map = new Map({
+                    basemap: "streets"
+                });
+                var view = new MapView({
+                    container: "viewDiv",  // Reference to the scene div created in step 5
+                    map: map,  // Reference to the map object created before the scene
+                    zoom: 11,  // Sets the zoom level based on level of detail (LOD)
+                    center: [121.48, 31.23]  // Sets the center point of view in lon/lat
+                });
 
-<div class="dropdown">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="true">
-        时间
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-        <li onClick="changeMap('35min')"><a>35min</a></li>
-        <li onClick="changeMap('45min')"><a href="#">45min</a></li>
-        <li onClick="changeMap('55min')"><a href="#">55min</a></li>
-    </ul>
-</div>
+                var featureLayer = new FeatureLayer({
 
-<div id="viewDiv"></div>
-</body>
+                    //    url: "	https://localhost:6443/arcgis/rest/services/Shanghai/test/MapServer"
+                    url: "http://localhost:6080/arcgis/rest/services/35min/MapServer"
+                });
 
-<script>
+                map.add(featureLayer);
 
-    function changeMap(time) {
+
+            });
+		    function changeMap(time) {
         if (time == "35min") {
             require([
                 "esri/Map",
@@ -158,5 +166,28 @@
             });
         }
     }
+	</script>
+</head>
+<body>
+
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="true">
+        时间
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li onClick="changeMap('35min')"><a>35min</a></li>
+        <li onClick="changeMap('45min')"><a href="#">45min</a></li>
+        <li onClick="changeMap('55min')"><a href="#">55min</a></li>
+    </ul>
+</div>
+
+<div id="viewDiv"></div>
+</body>
+
+<script>
+	
+
 </script>
 </html>
