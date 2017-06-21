@@ -8,6 +8,17 @@
 
 }
 
+.topButton {
+    position: absolute;
+    left: 18px;
+    top: 100px;
+    z-index: 999;
+
+}
+body > div.topButton > a{
+    text-decoration:none;
+    color:#333;
+}
 .intro {
     position: absolute;
     right: 50px;
@@ -25,4 +36,25 @@
 .work-gif {
     width: 220px;
     height: 120px;
+}
+
+#messages {
+    background-color: #fff;
+    box-shadow: 0 0 5px #888;
+    font-size: 1.1em;
+    max-width: 30em;
+    padding: 0.5em;
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    z-index: 40;
+}
+
+.messages {
+    width: 200px;
+    position: absolute;
+    left: 360px;
+    top: 60px;
+    z-Index: 999;
+    background-color: white
 }

@@ -10,7 +10,7 @@ function hello() {
     var t = getKM().toString();
     t = t.split('.')[0];
     place.text(t + "分钟");
-    console.log(getKM().toString());
+    // console.log(getKM().toString());
 }
 var lenth;
 function getKM() {
