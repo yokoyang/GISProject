@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0b4f8d4-6528-4e37-8f18-69942d36a540" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/dataC.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/differChart.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/positioinBD.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/release/temp.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/Navigate.html" afterPath="$PROJECT_DIR$/release/Navigate.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/ShanghaiCulture.html" afterPath="$PROJECT_DIR$/release/ShanghaiCulture.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/buffer.html" afterPath="$PROJECT_DIR$/release/buffer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/culture.html" afterPath="$PROJECT_DIR$/release/culture.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/developmentChart.html" afterPath="$PROJECT_DIR$/release/developmentChart.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/distributionDiagram.html" afterPath="$PROJECT_DIR$/release/distributionDiagram.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/heatmap.html" afterPath="$PROJECT_DIR$/release/heatmap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/liu-chart-data.js" afterPath="$PROJECT_DIR$/release/liu-chart-data.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/mapInfo.html" afterPath="$PROJECT_DIR$/release/mapInfo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/release/search_earth.html" afterPath="$PROJECT_DIR$/release/search_earth.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,46 +31,31 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="mapInfo.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mapInfo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/release/mapInfo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="serviceArea.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/release/serviceArea.html">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="420">
-              <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+              <caret line="52" column="46" lean-forward="false" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mapStyle.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/release/mapStyle.css">
+      <file leaf-file-name="differChart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/release/differChart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+            <state relative-caret-position="524">
+              <caret line="50" column="46" lean-forward="false" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShanghaiCulture.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/production/yu/ShanghaiCulture.html">
+      <file leaf-file-name="liu-chart-data.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/release/liu-chart-data.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+            <state relative-caret-position="377">
+              <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,19 +64,35 @@
       <file leaf-file-name="ShanghaiCulture.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/release/ShanghaiCulture.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7854">
-              <caret line="187" column="7" lean-forward="false" selection-start-line="187" selection-start-column="7" selection-end-line="187" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="528">
+              <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_earth.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/release/search_earth.html">
+      <file leaf-file-name="buffer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/release/buffer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4788">
-              <caret line="114" column="20" lean-forward="false" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="722">
+              <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="distributionDiagram.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/production/liu/distributionDiagram.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="156" selection-end-column="41" />
+              <folding>
+                <element signature="n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,39 +100,48 @@
       <file leaf-file-name="heatmap.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/release/heatmap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5754">
-              <caret line="137" column="7" lean-forward="false" selection-start-line="137" selection-start-column="7" selection-end-line="137" selection-end-column="7" />
-              <folding />
+            <state relative-caret-position="566">
+              <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/production/he/layout.html">
+      <file leaf-file-name="developmentChart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/release/developmentChart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4410">
-              <caret line="105" column="36" lean-forward="false" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
-              <folding />
+            <state relative-caret-position="482">
+              <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serviceArea.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/production/he/serviceArea.html">
+      <file leaf-file-name="distributionDiagram.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/release/distributionDiagram.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2150">
-              <caret line="78" column="104" lean-forward="true" selection-start-line="78" selection-start-column="104" selection-end-line="78" selection-end-column="104" />
-              <folding />
+            <state relative-caret-position="420">
+              <caret line="145" column="23" lean-forward="false" selection-start-line="145" selection-start-column="23" selection-end-line="145" selection-end-column="23" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="drawTool.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/production/he/drawTool.html">
+      <file leaf-file-name="search_earth.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/release/search_earth.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="672">
-              <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-              <folding />
+              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <folding>
+                <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,8 +151,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -153,6 +177,9 @@
       <find>返回</find>
       <find>fe</find>
       <find>dropdown</find>
+      <find>Use</find>
+      <find>环同济经济圈文化产业链</find>
+      <find>Charts</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -167,31 +194,35 @@
         <option value="$PROJECT_DIR$/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/release/readme.txt" />
         <option value="$PROJECT_DIR$/production/he/layout.html" />
-        <option value="$PROJECT_DIR$/release/developmentChart.html" />
         <option value="$PROJECT_DIR$/production/he/readme.txt" />
         <option value="$PROJECT_DIR$/css/tundra.css" />
         <option value="$PROJECT_DIR$/css/styles.css" />
-        <option value="$PROJECT_DIR$/release/distributionDiagram.html" />
         <option value="$PROJECT_DIR$/release/3dmap.html" />
         <option value="$PROJECT_DIR$/release/3Dsearch.html" />
         <option value="$PROJECT_DIR$/css/font-awesome.min.css" />
         <option value="$PROJECT_DIR$/release/change.js" />
-        <option value="$PROJECT_DIR$/release/Navigate.html" />
-        <option value="$PROJECT_DIR$/release/buffer.html" />
         <option value="$PROJECT_DIR$/production/lu/culture.html" />
-        <option value="$PROJECT_DIR$/release/culture.html" />
         <option value="$PROJECT_DIR$/production/yu/measurement.html" />
         <option value="$PROJECT_DIR$/production/yu/search_earth.html" />
         <option value="$PROJECT_DIR$/production/yu/ShanghaiCulture.html" />
         <option value="$PROJECT_DIR$/production/yu/heatmap.html" />
         <option value="$PROJECT_DIR$/release/mapUtil.html" />
-        <option value="$PROJECT_DIR$/release/heatmap.html" />
-        <option value="$PROJECT_DIR$/release/search_earth.html" />
-        <option value="$PROJECT_DIR$/release/ShanghaiCulture.html" />
         <option value="$PROJECT_DIR$/production/he/serviceArea.html" />
         <option value="$PROJECT_DIR$/release/mapStyle.css" />
         <option value="$PROJECT_DIR$/release/serviceArea.html" />
+        <option value="$PROJECT_DIR$/release/Navigate.html" />
+        <option value="$PROJECT_DIR$/release/dataC.js" />
+        <option value="$PROJECT_DIR$/release/culture.html" />
+        <option value="$PROJECT_DIR$/release/temp.html" />
         <option value="$PROJECT_DIR$/release/mapInfo.html" />
+        <option value="$PROJECT_DIR$/release/heatmap.html" />
+        <option value="$PROJECT_DIR$/release/search_earth.html" />
+        <option value="$PROJECT_DIR$/release/ShanghaiCulture.html" />
+        <option value="$PROJECT_DIR$/release/buffer.html" />
+        <option value="$PROJECT_DIR$/release/developmentChart.html" />
+        <option value="$PROJECT_DIR$/release/differChart.html" />
+        <option value="$PROJECT_DIR$/release/distributionDiagram.html" />
+        <option value="$PROJECT_DIR$/release/liu-chart-data.js" />
       </list>
     </option>
   </component>
@@ -223,7 +254,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -260,42 +290,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="release" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GISProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GISProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GISProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GISProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="production" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -318,28 +312,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GISProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GISProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="E:/node_4.5/node" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="JavaScriptPreferStrict" value="false" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -453,17 +434,19 @@
       <workItem from="1498023396531" duration="4189000" />
       <workItem from="1498041178112" duration="557000" />
       <workItem from="1498042036502" duration="14564000" />
-      <workItem from="1498060297251" duration="1068000" />
+      <workItem from="1498060297251" duration="3751000" />
+      <workItem from="1498064117341" duration="4050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24225000" />
+    <option name="totallyTimeSpent" value="30958000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2869" y="-11" width="2902" height="1582" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16479269" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16479269" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936803" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -492,49 +475,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/esri.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="414607" lean-forward="false" selection-start-line="0" selection-start-column="414607" selection-end-line="0" selection-end-column="414607" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/production/liu/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="8" column="15" lean-forward="false" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/rdfa.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="175" column="12" lean-forward="false" selection-start-line="175" selection-start-column="12" selection-end-line="175" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/bootstrap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/release/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/production/liu/showMap.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -581,7 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23940">
           <caret line="570" column="1" lean-forward="true" selection-start-line="570" selection-start-column="1" selection-end-line="570" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -589,7 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,41 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/release/Navigate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="97" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/release/buffer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5552">
-          <caret line="247" column="10" lean-forward="true" selection-start-line="247" selection-start-column="10" selection-end-line="247" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/production/lu/culture.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/release/distributionDiagram.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5544">
-          <caret line="132" column="77" lean-forward="true" selection-start-line="132" selection-start-column="77" selection-end-line="132" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/release/developmentChart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="18" column="33" lean-forward="true" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/release/3Dsearch.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -723,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="4" column="34550" lean-forward="false" selection-start-line="4" selection-start-column="34550" selection-end-line="4" selection-end-column="34550" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,13 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="8">
           <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/release/culture.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -755,18 +650,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/production/he/mapv.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/production/he/baseWidgets.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
           <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -775,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
           <caret line="14" column="31" lean-forward="false" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -783,15 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/release/heatmap.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5754">
-          <caret line="137" column="7" lean-forward="false" selection-start-line="137" selection-start-column="7" selection-end-line="137" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -799,15 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
           <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/release/ShanghaiCulture.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7854">
-          <caret line="187" column="7" lean-forward="false" selection-start-line="187" selection-start-column="7" selection-end-line="187" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -815,15 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4410">
           <caret line="105" column="36" lean-forward="false" selection-start-line="105" selection-start-column="36" selection-end-line="105" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/release/search_earth.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4788">
-          <caret line="114" column="20" lean-forward="false" selection-start-line="114" selection-start-column="20" selection-end-line="114" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -831,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2150">
           <caret line="78" column="104" lean-forward="true" selection-start-line="78" selection-start-column="104" selection-end-line="78" selection-end-column="104" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -839,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -847,20 +704,165 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/Navigate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2226">
+          <caret line="53" column="22" lean-forward="false" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/positioinBD.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="8" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/production/he/mapv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="34" column="33" lean-forward="true" selection-start-line="34" selection-start-column="33" selection-end-line="34" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/dataC.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10080">
+          <caret line="242" column="21" lean-forward="true" selection-start-line="242" selection-start-column="21" selection-end-line="242" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/culture.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1210">
+          <caret line="93" column="46" lean-forward="false" selection-start-line="93" selection-start-column="46" selection-end-line="93" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/production/lu/culture.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="25" column="28" lean-forward="true" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/temp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="163" column="0" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/release/mapInfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="79" column="30" lean-forward="true" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
+        <state relative-caret-position="420">
+          <caret line="52" column="46" lean-forward="false" selection-start-line="52" selection-start-column="46" selection-end-line="52" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/heatmap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#2;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/search_earth.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/ShanghaiCulture.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="147" column="0" lean-forward="true" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/buffer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/developmentChart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/differChart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="50" column="46" lean-forward="false" selection-start-line="50" selection-start-column="46" selection-end-line="50" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/production/liu/distributionDiagram.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="153" column="0" lean-forward="false" selection-start-line="153" selection-start-column="0" selection-end-line="156" selection-end-column="41" />
+          <folding>
+            <element signature="n#div#6;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/distributionDiagram.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="145" column="23" lean-forward="false" selection-start-line="145" selection-start-column="23" selection-end-line="145" selection-end-column="23" />
+          <folding>
+            <element signature="n#nav#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/release/liu-chart-data.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="240" column="0" lean-forward="false" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

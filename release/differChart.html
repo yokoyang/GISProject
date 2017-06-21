@@ -3,11 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lumino - Charts</title>
+    <title>Lumino - Tables</title>
 
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/datepicker3.css" rel="stylesheet">
+    <link href="../css/bootstrap-table.css" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
+    <link href="mapStyle.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="../js/respond.min.js"></script>
     <![endif]-->
@@ -43,14 +45,14 @@
         <li><a href="search_earth.html"><span class="glyphicon glyphicon-eye-close"></span>三维搜索</a></li>
         <li><a href="ShanghaiCulture.html"><span class="glyphicon glyphicon-hand-up"></span>地图弹窗交互</a></li>
         <li><a href="buffer.html"><span class="glyphicon glyphicon-th"></span>缓冲区</a></li>
-        <li class="active"><a href="developmentChart.html"><span class="glyphicon glyphicon-stats"></span>发展图表</a></li>
+        <li><a href="developmentChart.html"><span class="glyphicon glyphicon-stats"></span>发展图表</a></li>
         <li><a href="distributionDiagram.html"><span class="glyphicon glyphicon-list-alt"></span>分布图表</a></li>
-        <li><a href="differChart.html"><span class="glyphicon glyphicon-list-alt"></span>对比图表</a></li>
+        <li class="active"><a href="differChart.html"><span class="glyphicon glyphicon-list-alt"></span>对比图表</a></li>
         <li><a href="temp.html"><span class="glyphicon glyphicon-flag"></span>产业布局方案</a></li>
 
         <li><a href="Navigate.html"><span class="glyphicon glyphicon-random"></span>导航</a></li>
     </ul>
-    <div class="attribution">Template by <a href="http://www.medialoot.com/item/lumino-admin-bootstrap-template/">Medialoot</a>
+    <div class="attribution">GIS<a href="http://www.medialoot.com/item/lumino-admin-bootstrap-template/">项目小组</a>
     </div>
 </div><!--/.sidebar-->
 
@@ -58,51 +60,69 @@
     <div class="row">
         <ol class="breadcrumb">
             <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-            <li class="active">Charts</li>
+            <li class="active">产业比重</li>
         </ol>
     </div><!--/.row-->
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">产业发展的规划和方向</h1>
+            <h1 class="page-header">教育科技产业和文化创意产业比重</h1>
         </div>
     </div><!--/.row-->
-
+`
 
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">杨浦和嘉定产业比例分析</h2>
+            <h2 class="page-header">1900~1949 杨浦和黄浦教育科技产业和文化创意产业比重</h2>
         </div>
-        <div class="col-md-6">
-            <div id="pie-chart-dis" style="width: 100%;height:400px;"></div>
-        </div>
-        <div class="col-md-6">
-            <div id="pie-chart-dis2" style="width: 100%;height:400px;"></div>
-        </div>
+
     </div><!--/.row-->
-
-
+    <div class="row">
+        <div class="col-md-6">
+            <div id="pie-chart-dis6" style="width: 100%;height:400px;"></div>
+        </div>
+        <div class="col-md-6">
+            <div id="pie-chart-dis7" style="width: 100%;height:400px;"></div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-lg-12">
-            <h2 class="page-header">各类型文化创意产业占比</h2>
-        </div>
-        <div class="col-md-6">
-            <div id="pie-chart-dis3" style="width: 100%;height:400px;"></div>
-        </div>
-        <div class="col-md-6">
-            <div id="pie-chart-dis4" style="width: 100%;height:400px;"></div>
+            <h2 class="page-header">2000至今 杨浦和黄浦教育科技产业和文化创意产业比重</h2>
         </div>
     </div><!--/.row-->
+    <div class="row">
+        <div class="col-md-6">
+            <div id="pie-chart-dis8" style="width: 100%;height:400px;"></div>
+        </div>
+        <div class="col-md-6">
+            <div id="pie-chart-dis9" style="width: 100%;height:400px;"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">1949~2000 杨浦和黄浦教育科技产业和文化创意产业比重</h2>
+        </div>
+    </div><!--/.row-->
+    <div class="row">
+        <div class="col-md-6">
+            <div id="pie-chart-dis10" style="width: 100%;height:400px;"></div>
+        </div>
+        <div class="col-md-6">
+            <div id="pie-chart-dis11" style="width: 100%;height:400px;"></div>
+        </div>
+    </div>
 
+</div><!--/.row-->
 </div>    <!--/.main-->
-
 
 <script src="../js/jquery-1.11.1.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<script src="echarts.min.js"></script>
-<script src="distriChart.js"></script>
-
+<script src="../js/chart.min.js"></script>
+<script src="../js/chart-data.js"></script>
+<script src="../js/easypiechart.js"></script>
+<script src="../js/easypiechart-data.js"></script>
 <script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/bootstrap-table.js"></script>
 <script>
     !function ($) {
         $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
@@ -118,6 +138,10 @@
         if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
     })
 </script>
+<script src="../js/jquery-1.11.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="echarts.min.js"></script>
+<script src="dataC.js"></script>
 </body>
 
 </html>

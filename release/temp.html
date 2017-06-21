@@ -53,14 +53,17 @@
         require([
             "esri/map",
             "esri/dijit/Popup", "esri/dijit/PopupTemplate",
-            "esri/layers/FeatureLayer",
+            "esri/layers/FeatureLayer","esri/dijit/BasemapGallery", "esri/arcgis/utils",
+            "dojo/parser",
             "esri/symbols/SimpleFillSymbol", "esri/Color",
             "dojo/dom-class", "dojo/dom-construct", "dojo/on",
             "dojox/charting/Chart", "dojox/charting/themes/Dollar",
+            "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dijit/TitlePane",
             "dojo/domReady!"
         ], function (Map,
                      Popup, PopupTemplate,
-                     FeatureLayer,
+                     FeatureLayer,BasemapGallery, arcgisUtils,
+                     parser,
                      SimpleFillSymbol, Color,
                      domClass, domConstruct, on,
                      Chart, theme) {
@@ -68,41 +71,55 @@
             //assign it to the map if you want to change default properties. Here we are
             //noting that the specified title content should display in the header bar
             //and providing our own selection symbol for polygons.
+
+            parser.parse();
+
             var fill = new SimpleFillSymbol("solid", null, new Color("#b5ce1f"));
             var popup = new Popup({
                 fillSymbol: fill,
                 titleInBody: false
             }, domConstruct.create("div"));
+//            popup.resize(900,900);
             //Add the dark theme which is customized further in the <style> tag at the top of this page
             domClass.add(popup.domNode, "dark");
 
-            map = new Map("map", {
+            map = new Map("mapDiv", {
                 basemap: "gray",
-                center: [121.47, 31.23],
-                zoom: 9,
+                center: [121.48, 31.23],
+                zoom: 13,
                 infoWindow: popup
             });
 
+            var basemapGallery = new BasemapGallery({
+                showArcGISBasemaps: true,
+                map: map
+            }, "basemapGallery");
+            basemapGallery.startup();
+
+            basemapGallery.on("error", function(msg) {
+                console.log("basemap gallery error:  ", msg);
+            });
+
             var template = new PopupTemplate({
-                title: "上海市{Name}文化产业分布",
+                title: "{Name}规划情况",
                 fieldInfos: [{
-                    fieldName: "AllCount",
-                    label: "各类产业总数",
+                    fieldName: "ComCount",
+                    label: "预期企业数"
                 }, {
-                    fieldName: "CulCount",
-                    label: "文化产业总数"
+                    fieldName: "BuildArea",
+                    label: "建筑面积"
                 }],
                 mediaInfos: [{
                     caption: "",
                     type: "columnchart",
                     value: {
                         theme: "Dollar",
-                        fields: ["AllCount", "CulCount"]
+                        fields: ["ComCount", "BuildArea"]
                     }
                 }]
             });
 
-            var featureLayer = new FeatureLayer("https://localhost:6443/arcgis/rest/services/ShanghaiArea/MapServer/0", {
+            var featureLayer = new FeatureLayer("https://localhost:6443/arcgis/rest/services/Shanghai/Yangpu_newCulture/MapServer/0", {
                 mode: FeatureLayer.MODE_ONDEMAND,
                 outFields: ["*"],
                 infoTemplate: template
@@ -139,20 +156,40 @@
         <li><a href="mapInfo.html"><span class="glyphicon glyphicon-dashboard"></span>地图信息</a></li>
         <li><a href="heatmap.html"><span class="glyphicon glyphicon-map-marker"></span>热力图</a></li>
         <li><a href="search_earth.html"><span class="glyphicon glyphicon-eye-close"></span>三维搜索</a></li>
-        <li class="active"><a href="ShanghaiCulture.html"><span class="glyphicon glyphicon-hand-up"></span>地图弹窗交互</a></li>
+        <li><a href="ShanghaiCulture.html"><span class="glyphicon glyphicon-hand-up"></span>地图弹窗交互</a></li>
         <li><a href="buffer.html"><span class="glyphicon glyphicon-th"></span>缓冲区</a></li>
         <li><a href="developmentChart.html"><span class="glyphicon glyphicon-stats"></span>发展图表</a></li>
         <li><a href="distributionDiagram.html"><span class="glyphicon glyphicon-list-alt"></span>分布图表</a></li>
         <li><a href="differChart.html"><span class="glyphicon glyphicon-list-alt"></span>对比图表</a></li>
-        <li><a href="temp.html"><span class="glyphicon glyphicon-flag"></span>产业布局方案</a></li>
-
+        <li class="active"><a href="temp.html"><span class="glyphicon glyphicon-flag"></span>产业布局方案</a></li>
         <li><a href="Navigate.html"><span class="glyphicon glyphicon-random"></span>导航</a></li>
+
     </ul>
     <div class="attribution">Template by <a href="http://www.medialoot.com/item/lumino-admin-bootstrap-template/">Medialoot</a>
     </div>
 </div><!--/.sidebar-->
 
-<div id="map"></div>
+<div data-dojo-type="dijit/layout/BorderContainer"
+     data-dojo-props="design:'headline', gutters:false"
+     style="width:100%;height:100%;margin-top:50px;">
+
+    <div id="mapDiv"
+         data-dojo-type="dijit/layout/ContentPane"
+         data-dojo-props="region:'center'"
+         style="padding:0;">
+
+        <div style="position:absolute; right:20px; top:10px; z-Index:999;">
+            <div data-dojo-type="dijit/TitlePane"
+                 data-dojo-props="title:'Basemap', closable:false, open:false">
+                <div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
+                    <div id="basemapGallery"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--<div id="mapDiv"></div>-->
 </body>
 
 </html>
