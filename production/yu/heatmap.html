@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
+    <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
-    <title>文化产业分布</title>
-
-    <link rel="stylesheet" href="../../css/claro.css">
-    <link rel="stylesheet" href="../../css/esri.css">
+    <title>上海市文化产业分布热力图</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.20/dijit/themes/claro/claro.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/css/esri.css">
+    <script src="https://js.arcgis.com/3.20/"></script>
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/datepicker3.css" rel="stylesheet">
     <link href="../../css/styles.css" rel="stylesheet">
@@ -15,11 +14,13 @@
     <script src="../../js/respond.min.js"></script>
     <![endif]-->
     <script src="change.js"></script>
+
     <style>
         html, body, #map {
-            padding: 0;
-            margin: 0;
             height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
         }
 
         body {
@@ -27,93 +28,41 @@
             overflow: hidden;
             font-family: "Trebuchet MS", serif;
         }
-        /* Change color of icons to match bar chart and selection symbol */
-        .esriPopup.dark div.titleButton,
-        .esriPopup.dark div.titlePane .title,
-        .esriPopup.dark div.actionsPane .action {
-            color: #A4CE67;
-        }
-
-        /* Additional customizations */
-        .esriPopup.dark .esriPopupWrapper {
-            border: none;
-        }
-
-        .esriPopup .contentPane {
-            text-align: center;
-        }
-
-        .esriViewPopup .gallery {
-            margin: 0 auto;
-        }
     </style>
-
-    <script src="../../js/sdk/arcgis3.20.js"></script>
     <script>
         var map;
         require([
-            "esri/map",
-            "esri/dijit/Popup", "esri/dijit/PopupTemplate",
-            "esri/layers/FeatureLayer",
-            "esri/symbols/SimpleFillSymbol", "esri/Color",
-            "dojo/dom-class", "dojo/dom-construct", "dojo/on",
-            "dojox/charting/Chart", "dojox/charting/themes/Dollar",
-            "dojo/domReady!"
-        ], function (Map,
-                     Popup, PopupTemplate,
-                     FeatureLayer,
-                     SimpleFillSymbol, Color,
-                     domClass, domConstruct, on,
-                     Chart, theme) {
-            //The popup is the default info window so you only need to create the popup and
-            //assign it to the map if you want to change default properties. Here we are
-            //noting that the specified title content should display in the header bar
-            //and providing our own selection symbol for polygons.
-            var fill = new SimpleFillSymbol("solid", null, new Color("#b5ce1f"));
-            var popup = new Popup({
-                fillSymbol: fill,
-                titleInBody: false
-            }, domConstruct.create("div"));
-            //Add the dark theme which is customized further in the <style> tag at the top of this page
-            domClass.add(popup.domNode, "dark");
+                "esri/InfoTemplate",
+                "esri/layers/FeatureLayer",
+                "esri/map",
+                "esri/renderers/HeatmapRenderer",
+                "dojo/domReady!"
+            ],
+            function (InfoTemplate, FeatureLayer, Map, HeatmapRenderer) {
+                map = new Map("map", {
+                    basemap: "hybrid",
+                    center: [121.47, 31.23],
+                    zoom: 10
+                });
+                var infoContentDesc = "<p>${numfatal:formatFatalities} died when a ${age} year old ${sex:formatGender} was involved in a fatal speeding accident.</p>";
+                var infoContentDetails = "${atmcond:formatConditions}${conszone:formatWorkZone}${alcres:formatAlcoholTestResults}";
+                var infoContent = infoContentDesc + infoContentDetails;
+                var infoTemplate = new InfoTemplate("Accident details", infoContent);
 
-            map = new Map("map", {
-                basemap: "gray",
-                center: [121.47, 31.23],
-                zoom: 9,
-                infoWindow: popup
+                var serviceURL = "https://localhost:6443/arcgis/rest/services/HeatMapService/MapServer/0";
+                var heatmapFeatureLayerOptions = {
+                    mode: FeatureLayer.MODE_SNAPSHOT,
+                    infoTemplate: infoTemplate,
+                };
+                var heatmapFeatureLayer = new FeatureLayer(serviceURL, heatmapFeatureLayerOptions);
+                var heatmapRenderer = new HeatmapRenderer();
+                heatmapFeatureLayer.setRenderer(heatmapRenderer);
+                map.addLayer(heatmapFeatureLayer);
             });
-
-            var template = new PopupTemplate({
-                title: "上海市{Name}文化产业分布",
-                fieldInfos: [{
-                    fieldName: "AllCount",
-                    label: "各类产业总数",
-                }, {
-                    fieldName: "CulCount",
-                    label: "文化产业总数"
-                }],
-                mediaInfos: [{
-                    caption: "",
-                    type: "columnchart",
-                    value: {
-                        theme: "Dollar",
-                        fields: ["AllCount", "CulCount"]
-                    }
-                }]
-            });
-
-            var featureLayer = new FeatureLayer("https://localhost:6443/arcgis/rest/services/ShanghaiArea/MapServer/0", {
-                mode: FeatureLayer.MODE_ONDEMAND,
-                outFields: ["*"],
-                infoTemplate: template
-            });
-            map.addLayer(featureLayer);
-        });
     </script>
-</head>
 
-<body class="claro">
+</head>
+<body class="claro" onload="startLoop()">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -186,6 +135,6 @@
 </div><!--/.sidebar-->
 
 <div id="map"></div>
-</body>
 
+</body>
 </html>
