@@ -5,37 +5,13 @@
 
     <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
     <title>Basemap gallery</title>
-    <link rel="stylesheet" href="https://js.arcgis.com/3.20/dijit/themes/claro/claro.css">
-    <link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/css/esri.css">
+    <link rel="stylesheet" href="../3css/claro.css">
+    <link rel="stylesheet" href="../3css/esri.css">
+    <link rel="stylesheet" href="mapStyle.css">
     <style>
-        html, body {
-            height: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-
-        #map {
-            padding: 0;
-        }
-
-        .esriPopup.dark div.titleButton,
-        .esriPopup.dark div.titlePane .title,
-        .esriPopup.dark div.actionsPane .action {
-            color: #A4CE67;
-        }
-
-        /* Additional customizations */
-        .esriPopup.dark .esriPopupWrapper {
-            border: none;
-        }
-
-        .esriPopup .contentPane {
-            text-align: center;
-        }
-
-        .esriViewPopup .gallery {
-            margin: 0 auto;
+        html, body { height: 100%; width: 100%; margin: 0; padding: 0; }
+        #map{
+            padding:0;
         }
     </style>
 
@@ -44,50 +20,22 @@
         var map;
         require([
             "esri/map",
-            "esri/layers/FeatureLayer", "esri/dijit/BasemapGallery", "esri/arcgis/utils",
+            "esri/layers/FeatureLayer","esri/dijit/BasemapGallery", "esri/arcgis/utils",
             "dojo/parser",
-            "esri/dijit/Popup", "esri/dijit/PopupTemplate",
-            "esri/symbols/SimpleFillSymbol", "esri/Color",
+
             "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dijit/TitlePane",
-            "dojo/dom-class", "dojo/dom-construct", "dojo/on",
-            "dojox/charting/Chart", "dojox/charting/themes/Dollar",
             "dojo/domReady!"
-        ], function (Map, FeatureLayer,
-                     BasemapGallery, arcgisUtils, parser,
-                     Popup, PopupTemplate,
-                     SimpleFillSymbol, Color,
-                     domClass, domConstruct) {
+        ], function(
+            Map, FeatureLayer,
+            BasemapGallery, arcgisUtils,
+            parser
+        ) {
             parser.parse();
-            var fill = new SimpleFillSymbol("solid", null, new Color("#b5ce1f"));
-            var popup = new Popup({
-                fillSymbol: fill,
-                titleInBody: false
-            }, domConstruct.create("div"));
-            //Add the dark theme which is customized further in the <style> tag at the top of this page
-            domClass.add(popup.domNode, "dark");
+
             map = new Map("map", {
                 basemap: "topo",
-                center: [121.48, 31.23],
-                zoom: 13,
-                infoWindow: popup
-            });
-            var template = new PopupTemplate({
-                title: "上海市{Name}文化产业分布",
-                fieldInfos: [{
-                    fieldName: "AllCount",
-                    label: "各类产业总数",
-                }, {
-                    fieldName: "CulCount",
-                    label: "文化产业总数"
-                }],
-                mediaInfos: [{
-                    caption: "",
-                    type: "columnchart",
-                    value: {
-                        theme: "Dollar",
-                        fields: ["AllCount", "CulCount"]
-                    }
-                }]
+                center: [121.51, 31.27],
+                zoom: 13
             });
 
             //add the basemap gallery, in this case we'll display maps from ArcGIS.com including bing maps
@@ -97,16 +45,16 @@
             }, "basemapGallery");
             basemapGallery.startup();
 
-            basemapGallery.on("error", function (msg) {
+            basemapGallery.on("error", function(msg) {
                 console.log("basemap gallery error:  ", msg);
             });
 
             var featureLayer = new FeatureLayer("https://localhost:6443/arcgis/rest/services/Shanghai/Yangpu_culture/MapServer/1");
-//            var featureLayer2 = new FeatureLayer("https://localhost:6443/arcgis/rest/services/Shanghai/Yangpu_culture/MapServer/0");
+            var featureLayer2 = new FeatureLayer("https://localhost:6443/arcgis/rest/services/Shanghai/Yangpu_culture/MapServer/0");
 
-//            var start = new FeatureLayer("https://localhost:6443/arcgis/rest/services/Shanghai/OD/MapServer/0");
-//            var destination = new FeatureLayer("https://localhost:6443/arcgis/rest/services/Shanghai/OD/MapServer/1");
-//            var OD = new FeatureLayer("https://localhost:6443/arcgis/rest/services/Shanghai/OD/MapServer/2");
+            var start = new FeatureLayer("https://localhost:6443/arcgis/rest/services/Shanghai/OD/MapServer/0");
+            var destination = new FeatureLayer("https://localhost:6443/arcgis/rest/services/Shanghai/OD/MapServer/1");
+            var OD = new FeatureLayer("https://localhost:6443/arcgis/rest/services/Shanghai/OD/MapServer/2");
 
 
             map.addLayer(featureLayer);
@@ -116,12 +64,15 @@
             map.addLayer(start);
 
 
+
         });
     </script>
 </head>
 
 <body class="claro">
-<
+<div class="topButton">
+    <button href="release/Navigate.html">返回</button>
+</div>
 <div data-dojo-type="dijit/layout/BorderContainer"
      data-dojo-props="design:'headline', gutters:false"
      style="width:100%;height:100%;margin:0;">

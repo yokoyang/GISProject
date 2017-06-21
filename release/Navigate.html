@@ -6,7 +6,7 @@
     <title>Directions Widget</title>
     <link rel="stylesheet" href="../css/claro.css">
     <link rel="stylesheet" href="../css/esri.css">
-    <link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/css/esri.css">
+    <link rel="stylesheet" href="../3css/esri.css">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/datepicker3.css" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
@@ -28,6 +28,16 @@
             overflow: hidden;
             font-family: "Trebuchet MS", serif;
         }
+        .claro .dijitTitlePaneTitleFocus {
+            margin-top: 50px;
+            padding-bottom: 2px;
+        }
+        /*#dijit_TitlePane_0_titleBarNode > div > span.dijitTitlePaneTextNode{*/
+            /*position: absolute;*/
+            /*left:200px;*/
+            /*top:100px;*/
+            /*z-index: 9999;*/
+        /*}*/
     </style>
     <link href="mapStyle.css" rel="stylesheet">
 
@@ -36,9 +46,11 @@
     <script>
         require([
             "esri/urlUtils", "esri/map", "esri/dijit/Directions",
+            "esri/dijit/BasemapGallery", "esri/arcgis/utils",
             "dojo/parser",
-            "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dojo/domReady!"
-        ], function (urlUtils, Map, Directions,
+            "dijit/layout/BorderContainer", "dijit/layout/ContentPane", "dijit/TitlePane",
+            "dojo/domReady!"
+        ], function (urlUtils, Map, Directions,BasemapGallery, arcgisUtils,
                      parser) {
             parser.parse();
 
@@ -46,6 +58,16 @@
                 basemap: "streets",
                 center: [121.48, 31.22],
                 zoom: 7
+            });
+
+            var basemapGallery = new BasemapGallery({
+                showArcGISBasemaps: true,
+                map: map
+            }, "basemapGallery");
+            basemapGallery.startup();
+
+            basemapGallery.on("error", function(msg) {
+                console.log("basemap gallery error:  ", msg);
             });
 
             //default will point to ArcGIS world routing service
@@ -122,7 +144,18 @@
     </div>
     <div id="map"
          data-dojo-type="dijit/layout/ContentPane"
-         data-dojo-props="region:'center'">
+         data-dojo-props="region:'center'"
+         style="padding:0;">
+
+        <div style="position:absolute; right:20px; top:10px; z-Index:999;">
+            <div data-dojo-type="dijit/TitlePane"
+                 data-dojo-props="title:'切换地图', closable:false, open:false">
+                <div data-dojo-type="dijit/layout/ContentPane" style="width:380px; height:280px; overflow:auto;">
+                    <div id="basemapGallery"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </div>
 </body>
