@@ -1,119 +1,118 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
     <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no">
-    <title>文化产业分布</title>
-
-    <link rel="stylesheet" href="../../css/claro.css">
-    <link rel="stylesheet" href="../../css/esri.css">
+    <title>测量工具</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/themes/calcite/dijit/calcite.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.20/esri/themes/calcite/esri/esri.css">
     <link href="../../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../css/datepicker3.css" rel="stylesheet">
     <link href="../../css/styles.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="../../js/respond.min.js"></script>
-    <![endif]-->
     <script src="change.js"></script>
+    <script src="../../js/respond.min.js"></script>
     <style>
-        html, body, #map {
-            padding: 0;
-            margin: 0;
-            height: 100%;
+        html,body {
+            height:100%;
+            width:100%;
+            margin:0;
         }
-
         body {
-            background-color: #FFF;
-            overflow: hidden;
-            font-family: "Trebuchet MS", serif;
+            background-color:#FFF;
+            overflow:hidden;
+            font-family:"Trebuchet MS";
         }
-        /* Change color of icons to match bar chart and selection symbol */
-        .esriPopup.dark div.titleButton,
-        .esriPopup.dark div.titlePane .title,
-        .esriPopup.dark div.actionsPane .action {
-            color: #A4CE67;
+        #map {
+            border:solid 2px #808775;
+            -moz-border-radius:4px;
+            -webkit-border-radius:4px;
+            border-radius:4px;
+            margin:5px;
+            padding:0px;
         }
-
-        /* Additional customizations */
-        .esriPopup.dark .esriPopupWrapper {
-            border: none;
-        }
-
-        .esriPopup .contentPane {
-            text-align: center;
-        }
-
-        .esriViewPopup .gallery {
-            margin: 0 auto;
+        #titlePane{
+            width:280px;
         }
     </style>
-
-    <script src="../../js/sdk/arcgis3.20.js"></script>
+    <script src="https://js.arcgis.com/3.20/"></script>
     <script>
         var map;
         require([
+            "dojo/dom",
+            "esri/Color",
+            "dojo/keys",
+            "dojo/parser",
+
+            "esri/config",
+            "esri/sniff",
             "esri/map",
-            "esri/dijit/Popup", "esri/dijit/PopupTemplate",
+            "esri/SnappingManager",
+            "esri/dijit/Measurement",
             "esri/layers/FeatureLayer",
-            "esri/symbols/SimpleFillSymbol", "esri/Color",
-            "dojo/dom-class", "dojo/dom-construct", "dojo/on",
-            "dojox/charting/Chart", "dojox/charting/themes/Dollar",
+            "esri/renderers/SimpleRenderer",
+            "esri/tasks/GeometryService",
+            "esri/symbols/SimpleLineSymbol",
+            "esri/symbols/SimpleFillSymbol",
+
+            "esri/dijit/Scalebar",
+            "dijit/layout/BorderContainer",
+            "dijit/layout/ContentPane",
+            "dijit/TitlePane",
+            "dijit/form/CheckBox",
             "dojo/domReady!"
-        ], function (Map,
-                     Popup, PopupTemplate,
-                     FeatureLayer,
-                     SimpleFillSymbol, Color,
-                     domClass, domConstruct, on,
-                     Chart, theme) {
-            //The popup is the default info window so you only need to create the popup and
-            //assign it to the map if you want to change default properties. Here we are
-            //noting that the specified title content should display in the header bar
-            //and providing our own selection symbol for polygons.
-            var fill = new SimpleFillSymbol("solid", null, new Color("#b5ce1f"));
-            var popup = new Popup({
-                fillSymbol: fill,
-                titleInBody: false
-            }, domConstruct.create("div"));
-            //Add the dark theme which is customized further in the <style> tag at the top of this page
-            domClass.add(popup.domNode, "dark");
+        ], function(
+            dom, Color, keys, parser,
+            esriConfig, has, Map, SnappingManager, Measurement, FeatureLayer, SimpleRenderer, GeometryService, SimpleLineSymbol, SimpleFillSymbol
+        ) {
+            parser.parse();
+            //This sample may require a proxy page to handle communications with the ArcGIS Server services. You will need to
+            //replace the url below with the location of a proxy on your machine. See the 'Using the proxy page' help topic
+            //for details on setting up a proxy page.
+            esriConfig.defaults.io.proxyUrl = "/proxy/";
+            esriConfig.defaults.io.alwaysUseProxy = false;
+
+            //This service is for development and testing purposes only. We recommend that you create your own geometry service for use within your applications
+            esriConfig.defaults.geometryService = new GeometryService("https://utility.arcgisonline.com/ArcGIS/rest/services/Geometry/GeometryServer");
 
             map = new Map("map", {
-                basemap: "gray",
+                basemap: "streets",
                 center: [121.47, 31.23],
-                zoom: 9,
-                infoWindow: popup
+                zoom: 10
             });
 
-            var template = new PopupTemplate({
-                title: "上海市{Name}文化产业分布",
-                fieldInfos: [{
-                    fieldName: "AllCount",
-                    label: "各类产业总数",
-                }, {
-                    fieldName: "CulCount",
-                    label: "文化产业总数"
-                }],
-                mediaInfos: [{
-                    caption: "",
-                    type: "columnchart",
-                    value: {
-                        theme: "Dollar",
-                        fields: ["AllCount", "CulCount"]
-                    }
-                }]
-            });
+            var sfs = new SimpleFillSymbol(
+                "solid",
+                new SimpleLineSymbol("solid", new Color([195, 176, 23]), 2),
+                null
+            );
 
-            var featureLayer = new FeatureLayer("https://localhost:6443/arcgis/rest/services/ShanghaiArea/MapServer/0", {
+            var parcelsLayer = new FeatureLayer("https://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Louisville/LOJIC_LandRecords_Louisville/MapServer/0", {
                 mode: FeatureLayer.MODE_ONDEMAND,
-                outFields: ["*"],
-                infoTemplate: template
+                outFields: ["*"]
             });
-            map.addLayer(featureLayer);
+            parcelsLayer.setRenderer(new SimpleRenderer(sfs));
+            map.addLayers([parcelsLayer]);
+
+            //dojo.keys.copyKey maps to CTRL on windows and Cmd on Mac., but has wrong code for Chrome on Mac
+            var snapManager = map.enableSnapping({
+                snapKey: has("mac") ? keys.META : keys.CTRL
+            });
+            var layerInfos = [{
+                layer: parcelsLayer
+            }];
+            snapManager.setLayerInfos(layerInfos);
+
+            var measurement = new Measurement({
+                map: map
+            }, dom.byId("measurementDiv"));
+            measurement.startup();
         });
     </script>
 </head>
 
-<body class="claro">
+<body class="calcite">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -185,7 +184,16 @@
     </div>
 </div><!--/.sidebar-->
 
-<div id="map"></div>
+<div id="mainWindow" data-dojo-type="dijit/layout/BorderContainer" data-dojo-props="design:'headline',gutters:false"
+     style="width:100%; height:100%;">
+    <div id="map" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
+        <div style="position:absolute; right:20px; top:10px; z-Index:999;">
+            <div id="titlePane" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'选择测量类型', closable:false, open:false">
+                <div id="measurementDiv"></div>
+                <span style="font-size:smaller;padding:5px 5px;">Press <b>CTRL</b> to enable snapping.</span>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
-
 </html>
