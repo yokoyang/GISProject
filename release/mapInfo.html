@@ -9,7 +9,7 @@
     <link href="../css/datepicker3.css" rel="stylesheet">
     <link href="../css/bootstrap-table.css" rel="stylesheet">
     <link href="../css/styles.css" rel="stylesheet">
-
+    <link href="mapStyle.css" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="../js/respond.min.js"></script>
     <![endif]-->
@@ -41,6 +41,9 @@
     </form>
     <ul class="nav menu">
         <li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard"></span>地图信息</a></li>
+        <li><a href="heatmap.html"><span class="glyphicon glyphicon-map-marker"></span>热力图</a></li>
+        <li><a href="search_earth.html"><span class="glyphicon glyphicon-map-marker"></span>三维搜索</a></li>
+        <li><a href="ShanghaiCulture.html"><span class="glyphicon glyphicon-map-marker"></span>地图弹窗交互</a></li>
         <li><a href="buffer.html"><span class="glyphicon glyphicon-th"></span>缓冲区</a></li>
         <li><a href="developmentChart.html"><span class="glyphicon glyphicon-stats"></span>发展图表</a></li>
         <li><a href="distributionDiagram.html"><span class="glyphicon glyphicon-list-alt"></span>分布图表</a></li>
@@ -65,7 +68,43 @@
         </div>
     </div><!--/.row-->
 
+    <div class="row">
+        <div class="col-md-4">
+            <h2 style="margin: auto;">
+                交通流图
+            </h2>
+            <a href="mapv.html">
+                <img src="pic/2.png" class="img-responsive pic_bound" alt="Responsive image">
+            </a>
+        </div>
+        <div class="col-md-4">
+            <h2 style="margin: auto;">
+                重新规划方案
+            </h2>
+            <a href="culture.html">
+                <img src="pic/1.png" class="img-responsive pic_bound" alt="Responsive image">
+            </a>
+        </div>
+        <div class="col-md-4">
+            <h2 style="margin: auto;">
+                地图编辑
+            </h2>
+            <a href="drawTool.html">
+                <img src="pic/3.png" class="img-responsive pic_bound" alt="Responsive image">
+            </a>
+        </div>
 
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h2 style="margin: 30px auto auto;">
+                经济适用房建设区域
+            </h2>
+            <a href="serviceArea.html">
+                <img src="pic/4.png" class="img-responsive pic_bound" alt="Responsive image">
+            </a>
+        </div>
+    </div>
 
 </div><!--/.main-->
 
@@ -79,7 +118,7 @@
 <script src="../js/bootstrap-table.js"></script>
 <script>
     !function ($) {
-        $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+        $(document).on("click", "ul.nav li.parent > a > span.icon", function () {
             $(this).find('em:first').toggleClass("glyphicon-minus");
         });
         $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");

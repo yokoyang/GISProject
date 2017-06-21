@@ -38,6 +38,15 @@ body > div.topButton > a{
     height: 120px;
 }
 
+.myRow{
+    margin-top: 50px;
+}
+.pic_bound{
+    margin-right: 2px;
+    margin-top: 2px;
+    padding-top: 20px;
+}
+
 #messages {
     background-color: #fff;
     box-shadow: 0 0 5px #888;
